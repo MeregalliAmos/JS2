@@ -1,24 +1,33 @@
 <html>
-    <head>
-        <title>
-            JS ES 2
-        </title>
-    </head>
-    <body>
-        <h1>
-            JS ES 2
-        </h1>
-        <h2>
-            Static HTML page: excercise 1 but with JQuery
-        </h2>
-        <div>
-            Non premere il bottone!
-        </div>
-        <button>
-            CLICCAMI
-        </button>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-        
-        </script>
-    </body>
+  <head>
+    <title>JS ES 2</title>
+  </head>
+  <body>
+    <h1>JS ES 2</h1>
+    <h2>Static HTML page: excercise 1 but with JQuery</h2>
+    <!--<div>div 1</div>
+    <div>div2</div>-->
+    <div id="Div1">Non premere il bottone!</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //document.getElementById("Div1").innerHTML = "halo";
+      $("#Div1").html("Non premere il bottone");
+      $("body")
+        .append($('<button id="btn1">CLICCAMI</button>')
+        .click(function () {
+          $("#Div1").attr("style", "background-color:rgb(127, 156, 69)");
+          $("#Div1").html("TI AVEVO DETTO DI NON PREMERE MONA");
+          if (rosso) {
+            $("#btn1").attr("style", "background-color:rgb(253, 15, 178)");
+            rosso = false;
+          } else {
+            $("#btn1").attr("style", "background-color:rgb(230, 183, 99)");
+            rosso = true;
+          }
+        }));
+      var rosso = true;
+      $("body").append($("<h3>Aggiungo titolo H3</h3>"));
+    </script>
+  </body>
 </html>
